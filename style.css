@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family1: Arial, Helvetica, sans-serif;
+    --font-white1: white;
+    --font-white2: #ebebeb;
+    --font-grey1: rgb(146, 146, 146);
+    --bg-red1: #ee5345;
+    --bg-grey2: #686464;
+    --bg-grey3: #3c3c3c;
+    --bg-grey4: #383434;
+    --bg-green1: #80ccac;
+    --icone-height1: 25px;
+    --icone-height2: 33px;
+    --icon-height3: 100px;
+}
+
+body {
+    background-color: var(--bg-grey2);
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+.z-index-2 {
+    z-index: 2;
+}
+.z-index-3 {
+    z-index: 3;
+}
+.z-index-4 {
+    z-index: 4;
+}
+.z-index-5 {
+    z-index: 5;
+}
+.z-index-6 {
+    z-index: 6;
+}
+.z-index-7 {
+    z-index: 7;
+}
+
+/* GRILLES */
+/* 1. Grille principale */
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-auto-rows: 1em;
+    grid-gap: 2px;
+}
+
+/* 1.1. Grille left bar */
+.grid-container-lb {
+    grid-column: 1;
+    grid-row: 1/100;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 1em;
+    grid-gap: 2px;
+}
+
+/* 1.2. Grille right page */
+.grid-container-rp {
+    grid-column: 2;
+    grid-row: 1/100;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-auto-rows: 1em;
+    grid-gap: 2px;
+}
+
+/* LEFT BAR */
+.left-bar1 {
+    grid-column: 1/6;
+    grid-row: 1/44;
+    height: 774px;
+    width: 100%;
+    background-color: var(--bg-grey3);
+}
+.left-bar2 {
+    grid-column: 1/6;
+    grid-row: 44/55;
+    height: 170px;
+    width: 100%;
+    background-color: var(--bg-grey4);
+}
+
+/* 1. Top block : langue + loupe + logo */
+.langue {
+    grid-column: 1;
+    grid-row: 3;
+    text-align: right;
+    color: var(--font-grey1);
+    font-family: var(--font-family1);
+}
+.icon-search {
+    grid-column: 5;
+    grid-row: 3;
+    height: var(--icone-height1);
+    align-self: center;
+}
+.logo {
+    grid-column: 1/6;
+    grid-row: 5/10;
+    height: 4.5em;
+    margin: 0 auto;
+}
+
+/* 2. Catégories */
+.flex-container1 {
+    grid-column: 1/6;
+    grid-row: 12/32;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cat {
+    text-align: center;
+    font-size: 1em;
+    font-family: var(--font-family1);
+    color: var(--font-white1);
+    text-decoration: none;
+}
+.top-cat {
+    vertical-align: top;
+    font-size: 11px;
+    color: var(--font-grey1);
+}
+
+/* 3. Icones des reseaux sociaux */
+.flex-container2 {
+    grid-column: 2/5;
+    grid-row: 36/38;
+    display: flex;
+    justify-content: space-between;
+}
+.flex-container2 > img {
+    height: var(--icone-height1);
+}
+
+/* 4. Séparation */
+.line1 {
+    grid-column: 1/6;
+    grid-row: 39;
+    margin: 0 auto;
+    height: 1px;
+    min-width: 220px;
+    color: var(--font-grey1);
+    background-color: var(--font-grey1);
+    border: none;
+}
+
+/* 5. Indication de site sécurisé */
+.flex-container3 {
+    grid-column: 1/6;
+    grid-row: 40/43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-lock {
+    height: var(--icone-height1);
+}
+.text-icon-lock {
+    color: var(--font-grey1);
+    padding-left: 25px;
+}
+
+/* 6. Icones des os */
+.flex-container4 {
+    grid-column: 2/5;
+    grid-row: 46/49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-container4 > img {
+    height: var(--icone-height2);
+}
+.text-icon-os {
+    grid-column: 2/5;
+    grid-row: 50/52;
+    font-family: var(--font-family1);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--font-grey1);
+    text-align: center;
+}
+
+
+/* BACKGROUND */
+.background-image1 {
+    grid-column: 1/-1;
+    grid-row: 1/48;
+    background-image: url(./Images/paris.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* 1. Stats */
+.stat {
+    font-family: var(--font-family1);
+    font-weight: bold;
+    color: var(--font-white1);
+}
+.substat {
+    font-size: 2em;
+    font-family: var(--font-family1);
+    font-weight: bold;
+    color: var(--font-white1);
+}
+.stat1 {
+    grid-column: 3/11;
+    grid-row: 8/15;
+    font-size: 9.5em;
+}
+.substat1 {
+    grid-column: 4/14;
+    grid-row: 16/20;
+}
+.stat2 {
+    grid-column: 7/17;
+    grid-row: 26/34;
+    font-size: 13em;
+}
+.substat2 {
+    grid-column: 7/17;
+    grid-row: 37/41;
+}
+
+/* 2. Bottom rectangle */
+.background-rectangle1 {
+    grid-column: 1/11;
+    grid-row: 44/48;
+    height: 70px;
+    width: 100%;
+    background-color: var(--bg-green1);
+    display: flex;
+    align-items: center;
+}
+.text-bg-rectangle1 {
+    font-size: 2em;
+    font-family: var(--font-family1);
+    font-weight: bold;
+    color: var(--font-white1);
+    padding-left: 30px;
+}
+
+
+/* CARDS */
+.col1 {
+    grid-column: 1/6;
+}
+.col2 {
+    grid-column: 6/11;
+}
+.col3 {
+    grid-column: 11/16;
+}
+.col4 {
+    grid-column: 16/21;
+}
+.col1-2 {
+    grid-column: 1/11;
+}
+.col3-4 {
+    grid-column: 11/-1;
+}
+
+/* 1. Cards A */
+.card-A {
+    grid-row: 48/76;
+    background-position: center;
+    background-size: cover;
+}
+.card1 {
+    background-image: url(./Images/carte-1.jpeg);
+}
+.card2 {
+    background-image: url(./Images/carte-2.jpeg);
+}
+.card3 {
+    background-image: url(./Images/carte-3.jpeg)
+}
+.card4 {
+    background-image: url(./Images/carte-4.jpeg);
+}
+
+/* 2. Blocks */
+.block-card-A {
+    grid-row: 48/92;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1em;
+    grid-gap: 2px;
+}
+
+.slide_in-bottom:hover {
+    animation: slide_in-bottom 0.25s ease-in forwards;
+}
+
+@keyframes slide_in-bottom {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-216px);
+    }
+}
+
+/* 3. Cloudy cards */
+.cloudy-card-A-1 {
+    grid-column: 1;
+    grid-row: 30/35;
+    opacity: 45%;
+    background-color: black;
+    height: 198px;
+}
+.cloudy-card-A-2 {
+    grid-column: 1;
+    grid-row: 30/35;
+    display: flex;
+    flex-direction: column;
+    padding: 15% 8%;
+    font-family: var(--font-family1);
+    color: var(--font-white1);
+}
+
+/* 3.1. Texts */
+.text-card-A {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.subtext-card-A {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+
+/* 1. Cards B */
+/* 2. Card 5 */
+.card5 {
+    grid-row: 76/100;
+    background-color: var(--bg-green1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-family1);
+}
+.title-card-B {
+    padding: 15% 10%;
+    font-size: 1.2em;
+}
+.text-card-B {
+    padding: 0 14%;
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 1.3em;
+}
+.button-card-B {
+    margin: 15% 10%;
+    height: 40px;
+    border: none;
+    color: var(--bg-green1);
+    background-color: var(--font-white1);
+}
+
+/* 3. Cards 6 & 7 */
+.card6 {
+    grid-row: 76/88;
+    background-color: var(--font-white2);
+}
+.card7 {
+    grid-row: 88/100;
+    background-color: var(--font-white1);
+}
+.cards-6-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--font-family1);
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10%;
+}
+.icon-bike {
+    height: 80px;
+}
+.icon-book {
+    height: var(--icon-height3);
+}
+
+/* 4. Card 8 */
+.card8 {
+    grid-row: 76/100;
+    background-image: url(./Images/machine\ a\ ecrire.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* 4.1. Block */
+.block-card-8 {
+    grid-row: 76/112;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1em;
+    grid-gap: 2px;
+}
+
+/* 4.2. Cloudy card */
+.cloudy-card-B-1 {
+    grid-column: 1;
+    grid-row: 26/35;
+    opacity: 45%;
+    background-color: black;
+    height: 198px;
+}
+.cloudy-card-B-2 {
+    grid-column: 1;
+    grid-row: 30/35;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 8%;
+    font-family: var(--font-family1);
+    color: var(--font-white1);
+}
+.supertext-cloudy-card-B {
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 5px;
+}
+.text-cloudy-card-B {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 55px;
+    margin: 5px;
+}
+
+/* MAP */
+/* 1. Background */
+.map {
+    grid-column: 1/-1;
+    grid-row: 100/144;
+    background-image: url(./Images/carte2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* 2. Top rectangle */
+.background-rectangle2 {
+    grid-row: 100/104;
+    background-color: var(--bg-red1);
+    display: flex;
+}
+.left-text-bg-rectangle2, .right-text-bg-rectangle2 {
+    font-size: 2em;
+    font-family: var(--font-family1);
+    font-weight: bold;
+}
+.left-text-bg-rectangle2 {
+    margin: auto 5%;
+    color: var(--bg-grey3);
+}
+.right-text-bg-rectangle2 {
+    margin: auto 5%;
+    color: var(--font-white1);
+}
+
+/* CARDS (part. 2) */
+/* 1. Cards C */
+/* Card 9 */
+.card9 {
+    grid-row: 140/164;
+    background-color: var(--bg-red1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1em;
+    grid-gap: 2px;
+    font-family: var(--font-family1);
+}
+.flex-container-tit-card9 {
+    grid-row: 1/25;
+    display: flex;
+    flex-direction: column;
+}
+.title-card9 {
+    font-size: 1.1em;
+    margin: 12%;
+}
+.image-card9 {
+    height: 55%;
+    width: 100%;
+    object-fit: cover;
+}
+.text-image-card9 {
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1em;
+    margin: 12% 12% 14% 12%;
+}
+.flex-container-t-card9 {
+    grid-row: 1/25;
+    display: flex;
+    flex-direction: column;
+    margin: 31% 15% 14% 10%;
+    justify-content: space-between;
+}
+
+
+/* Card 10 */
+.card10 {
+    grid-row: 144/164;
+    background-color: var(--font-white2);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family1);
+}
+.subtitle-card10, .text-card10 {
+    margin-left: 10%;
+}
+.title-card10 {
+    font-size: 1.1em;
+    margin: 5%;
+}
+.subtitle-card10 {
+
+}
+.text-card10 {
+    margin-bottom: 3%;
+}
